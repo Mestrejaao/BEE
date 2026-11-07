@@ -1,0 +1,157 @@
+:root {
+  --background: #0b0d14;
+  --surface: #151925;
+  --surface-light: #202637;
+  --primary: #7775ff;
+  --text: #f4f5ff;
+  --muted: #9299ad;
+  --border: #292f40;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--background);
+  color: var(--text);
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+.app {
+  width: 100%;
+  max-width: 850px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 15px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #7775ff, #a56bff);
+  display: grid;
+  place-items: center;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.header h1 {
+  font-size: 21px;
+}
+
+.header p {
+  color: var(--muted);
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.welcome {
+  text-align: center;
+  margin: 55px 0 30px;
+}
+
+.welcome h2 {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.welcome p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.chat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 15px 0;
+}
+
+.message {
+  max-width: 85%;
+  padding: 15px;
+  border-radius: 16px;
+  line-height: 1.5;
+  font-size: 15px;
+}
+
+.assistant {
+  align-self: flex-start;
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+
+.user {
+  align-self: flex-end;
+  background: var(--primary);
+}
+
+#chat-form {
+  display: flex;
+  gap: 10px;
+  padding: 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+}
+
+#message-input {
+  flex: 1;
+  min-width: 0;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--text);
+  font-size: 15px;
+}
+
+#message-input::placeholder {
+  color: var(--muted);
+}
+
+#chat-form button {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: 12px;
+  padding: 18px 0 5px;
+}
+
+@media (max-width: 480px) {
+  .app {
+    padding: 15px;
+  }
+
+  .welcome {
+    margin-top: 40px;
+  }
+
+  .welcome h2 {
+    font-size: 21px;
+  }
+    }
