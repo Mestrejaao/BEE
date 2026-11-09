@@ -1,11 +1,12 @@
 :root {
-  --background: #0b0d14;
-  --surface: #151925;
-  --surface-light: #202637;
-  --primary: #7775ff;
-  --text: #f4f5ff;
-  --muted: #9299ad;
-  --border: #292f40;
+  --background: #090b10;
+  --surface: #151923;
+  --surface-light: #202735;
+  --primary: #ffd429;
+  --blue: #75dcff;
+  --text: #f5f7ff;
+  --muted: #929bad;
+  --border: #2b3240;
 }
 
 * {
@@ -16,7 +17,9 @@
 
 body {
   min-height: 100vh;
-  background: var(--background);
+  background:
+    radial-gradient(circle at 50% 0%, #24200d 0%, transparent 38%),
+    var(--background);
   color: var(--text);
   font-family: Arial, sans-serif;
   display: flex;
@@ -43,16 +46,19 @@ body {
 .logo {
   width: 48px;
   height: 48px;
-  border-radius: 15px;
-  background: linear-gradient(135deg, #7775ff, #a56bff);
+  border-radius: 12px;
+  background: var(--primary);
+  color: #111;
   display: grid;
   place-items: center;
   font-size: 26px;
   font-weight: bold;
+  box-shadow: 0 0 20px #ffd42935;
 }
 
 .header h1 {
   font-size: 21px;
+  color: var(--primary);
 }
 
 .header p {
@@ -96,11 +102,13 @@ body {
   align-self: flex-start;
   background: var(--surface);
   border: 1px solid var(--border);
+  border-left: 3px solid var(--blue);
 }
 
 .user {
   align-self: flex-end;
   background: var(--primary);
+  color: #151515;
 }
 
 #chat-form {
@@ -128,11 +136,16 @@ body {
 
 #chat-form button {
   background: var(--primary);
-  color: white;
+  color: #151515;
   border: none;
   padding: 12px 18px;
   border-radius: 10px;
   font-weight: bold;
+  cursor: pointer;
+}
+
+#chat-form button:hover {
+  box-shadow: 0 0 15px #ffd42955;
 }
 
 footer {
@@ -154,4 +167,4 @@ footer {
   .welcome h2 {
     font-size: 21px;
   }
-    }
+  }
